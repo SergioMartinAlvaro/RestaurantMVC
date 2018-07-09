@@ -5,3 +5,5 @@ c:\users\sergiomar\source\repos\POOTest\POOTest\obj\Debug\POOTest.csprojAssembly
 c:\users\sergiomar\source\repos\POOTest\POOTest\obj\Debug\POOTest.csproj.CoreCompileInputs.cache
 c:\users\sergiomar\source\repos\POOTest\POOTest\obj\Debug\POOTest.exe
 c:\users\sergiomar\source\repos\POOTest\POOTest\obj\Debug\POOTest.pdb
+C:\Users\SergioMar\source\repos\POOTest\POOTest\bin\Debug\Microsoft.VisualStudio.QualityTools.UnitTestFramework.dll
+C:\Users\SergioMar\source\repos\POOTest\POOTest\obj\Debug\POOTest.csproj.CopyComplete

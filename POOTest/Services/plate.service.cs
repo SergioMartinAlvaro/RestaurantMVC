@@ -18,7 +18,7 @@ namespace POOTest.Services
             {
                 int id = availablePlates.ToArray().Length + 1;
                 availablePlates.Add(new Plate(id, name));
-                return "Plate added succesfully!.";
+                return "Plate " + name + " added succesfully!.";
             }
             return "Error adding plate, a plate with the same name exists in database.";
         }
@@ -44,7 +44,13 @@ namespace POOTest.Services
                               "Plate name: " + availablePlate.name + "\r\n";
             }
 
-            return platesList;
+            if(platesList != "")
+            {
+                return platesList;
+            }
+            return "No plates found in database.";
+
+
         }
 
         private bool isUniquePlateName(string name)

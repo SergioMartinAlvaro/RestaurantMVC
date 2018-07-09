@@ -13,6 +13,11 @@ namespace POOTest.Controllers
 
         private Services.plate plateService = new Services.plate();
 
+        public plate()
+        {
+
+        }
+
         public string AddPlate(string name)
         {
             return plateService.AddPlate(name);

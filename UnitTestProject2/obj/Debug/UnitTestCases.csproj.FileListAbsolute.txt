@@ -1,0 +1,17 @@
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\obj\Debug\UnitTestCases.csprojAssemblyReference.cache
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\obj\Debug\UnitTestCases.csproj.CoreCompileInputs.cache
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTest.TestAdapter.dll
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.Interface.dll
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.MSTestAdapter.PlatformServices.dll
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\UnitTestProject2.dll
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\UnitTestProject2.pdb
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.dll
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.dll
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.xml
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\Microsoft.VisualStudio.TestPlatform.TestFramework.Extensions.xml
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\obj\Debug\UnitTestCases.csproj.CopyComplete
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\obj\Debug\UnitTestProject2.dll
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\obj\Debug\UnitTestProject2.pdb
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\POOTest.exe
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\POOTest.pdb
+C:\Users\SergioMar\source\repos\POOTest\UnitTestProject2\bin\Debug\POOTest.exe.config
