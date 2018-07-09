@@ -1,0 +1,7 @@
+c:\users\sergiomar\source\repos\POOTest\POOTest\bin\Debug\POOTest.exe.config
+c:\users\sergiomar\source\repos\POOTest\POOTest\bin\Debug\POOTest.exe
+c:\users\sergiomar\source\repos\POOTest\POOTest\bin\Debug\POOTest.pdb
+c:\users\sergiomar\source\repos\POOTest\POOTest\obj\Debug\POOTest.csprojAssemblyReference.cache
+c:\users\sergiomar\source\repos\POOTest\POOTest\obj\Debug\POOTest.csproj.CoreCompileInputs.cache
+c:\users\sergiomar\source\repos\POOTest\POOTest\obj\Debug\POOTest.exe
+c:\users\sergiomar\source\repos\POOTest\POOTest\obj\Debug\POOTest.pdb
