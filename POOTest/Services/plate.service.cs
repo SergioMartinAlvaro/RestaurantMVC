@@ -26,7 +26,16 @@ namespace POOTest.Services
 
         public string FindPlate(int id)
         {
-            return "";
+            IEnumerable<Plate> result = availablePlates.ToArray().Where((x) => x.id == id);
+            if(result.Count() > 0)
+            {
+                return "==============================\r\n" +
+                  "Plate id: " + result.First().id + "\r\n" +
+                  "Plate name: " + result.First().name + "\r\n";
+            }
+            return ApplicationMessages.plateNotFound;
+
+
         }
 
         public string RemovePlate(int id)

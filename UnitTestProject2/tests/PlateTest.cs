@@ -1,5 +1,6 @@
 ﻿using POOTest.Controllers;
 using POOTest.Utilities;
+using POOTest.Models;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestCases
@@ -69,6 +70,26 @@ namespace UnitTestCases
         public void plateRemoveWrongId()
         {
             Assert.AreEqual(plateController.RemovePlate(1), ApplicationMessages.errorDeletingIdNotFound);
+        }
+
+        [TestMethod]
+        public void FindPlate()
+        {
+            string response = plateController.AddPlate("jamon");
+            string testString = "==============================\r\n" +
+                              "Plate id: " + 1 + "\r\n" +
+                              "Plate name: " + "jamon" + "\r\n";
+            Assert.AreEqual(plateController.FindPlate(1), testString);
+        }
+
+        [TestMethod]
+        public void PlateNotFound()
+        {
+            string response = plateController.AddPlate("jamon");
+            string testString = "==============================\r\n" +
+                              "Plate id: " + 1 + "\r\n" +
+                              "Plate name: " + "jamon" + "\r\n";
+            Assert.AreEqual(plateController.FindPlate(1), testString);
         }
     }
 
