@@ -8,12 +8,12 @@ using System.Threading.Tasks;
 
 namespace POOTest.Controllers
 {
-    public class plate : IPlate
+    public class PlateController : IPlate
     {
 
-        private Services.plate plateService = new Services.plate();
+        private PlateService plateService = new PlateService();
 
-        public plate()
+        public PlateController()
         {
 
         }

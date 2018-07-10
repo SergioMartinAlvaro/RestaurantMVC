@@ -1,26 +1,27 @@
 ﻿using POOTest.Interfaces;
+using POOTest.Utilities;
 using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using POOTest.Models;
+using System.Collections;
 
 namespace POOTest.Services
 {
-    class plate : IPlate
+    class PlateService : IPlate
     {
         private List<Plate> availablePlates = new List<Plate>();
 
         public string AddPlate(string name)
         {
-            if(!isUniquePlateName(name))
+            if(!IsUniquePlateName(name))
             {
-                int id = availablePlates.ToArray().Length + 1;
-                availablePlates.Add(new Plate(id, name));
-                return "Plate " + name + " added succesfully!.";
+                availablePlates.Add(new Plate(CalculateId(availablePlates), name));
+                return ApplicationMessages.addedPlate;
             }
-            return "Error adding plate, a plate with the same name exists in database.";
+            return ApplicationMessages.errorPlateUniqueViolation;
         }
 
         public string FindPlate(int id)
@@ -30,7 +31,12 @@ namespace POOTest.Services
 
         public string RemovePlate(int id)
         {
-            return "";
+            if(id > availablePlates.Count() || id < 1)
+            {
+                return ApplicationMessages.errorDeletingIdNotFound;
+            }
+            availablePlates.RemoveAt(id - 1);
+            return ApplicationMessages.deletedPlate;
         }
 
         public string ShowPlates()
@@ -48,14 +54,26 @@ namespace POOTest.Services
             {
                 return platesList;
             }
-            return "No plates found in database.";
+            return ApplicationMessages.noPlatesInDataBase;
 
 
         }
 
-        private bool isUniquePlateName(string name)
+        private bool IsUniquePlateName(string name)
         {
             return (availablePlates.ToArray().Where((x) => x.name.ToLower() == name.ToLower())).Count() > 0;
+        }
+
+        private int CalculateId(List<Plate> listOfPlates )
+        {
+            if (listOfPlates.ToArray().Length == 0)
+            {
+                return 1;
+            }
+            else
+            {
+                return listOfPlates.ToArray()[listOfPlates.ToArray().Length - 1].id + 1;
+            }
         }
     }
 }

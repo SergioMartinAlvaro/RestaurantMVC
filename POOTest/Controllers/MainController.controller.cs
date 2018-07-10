@@ -5,30 +5,42 @@ using System.Text;
 using System.Threading.Tasks;
 using POOTest.Views;
 using POOTest.Controllers;
+using POOTest.Utilities;
 
 
 namespace POOTest.Controllers
 {
-    public class main
+    public class MainController
     {
 
-        public Controllers.plate plateController = new Controllers.plate();
+        public PlateController plateController = new PlateController();
         public string MenuController(string number)
         {
             switch(number)
             {
                 case "1":
-                    string name = VisualInterface.AskForString("Introduce the name of the new plate: ");
+                    string name = VisualInterface.AskForString(ApplicationMessages.askForNewPlate);
                     Console.WriteLine(plateController.AddPlate(name)); 
                     break;
                 case "2":
                     Console.WriteLine(plateController.ShowPlates());
                     break;
+                case "4":
+                    string id = VisualInterface.AskForString(ApplicationMessages.askForId);
+                    try
+                    {
+                        Console.WriteLine(plateController.RemovePlate(int.Parse(id)));
+                    } catch(Exception e)
+                    {
+                        Console.WriteLine(ApplicationMessages.badIdIntroduced);
+                    }
+                    break;
+
                 case "5":
                     Console.WriteLine("Bye! Have a nice day!");
                     break;
                 default:
-                    Console.WriteLine("Introduce a valid value.");
+                    Console.WriteLine(ApplicationMessages.badIdIntroduced);
                     break;
             }
 

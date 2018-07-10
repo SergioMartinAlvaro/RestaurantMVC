@@ -12,7 +12,7 @@ namespace POOTest
     {
         static void Main(string[] args)
         {
-            Controllers.main menu = new Controllers.main();
+            MainController menu = new MainController();
             menu.startApplication();
 
         }

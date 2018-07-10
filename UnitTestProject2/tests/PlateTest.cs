@@ -1,4 +1,5 @@
 ﻿using POOTest.Controllers;
+using POOTest.Utilities;
 using Microsoft.VisualStudio.TestTools.UnitTesting;
 
 namespace UnitTestCases
@@ -6,13 +7,13 @@ namespace UnitTestCases
     [TestClass]
     public class PlateTest
     {
-        private plate plateController = new plate();
+        private PlateController plateController = new PlateController();
 
         [TestMethod]
         public void PlateAddedSuccesfully()
         {
             string response = plateController.AddPlate("jamon");
-            Assert.AreEqual(response, "Plate jamon added succesfully!.");
+            Assert.AreEqual(response, ApplicationMessages.addedPlate);
         }
 
         [TestMethod]
@@ -20,7 +21,7 @@ namespace UnitTestCases
         {
             string response = plateController.AddPlate("jamon");
             response = plateController.AddPlate("jamon");
-            Assert.AreEqual(response, "Error adding plate, a plate with the same name exists in database.");
+            Assert.AreEqual(response, ApplicationMessages.errorPlateUniqueViolation);
 
         }
 
@@ -36,10 +37,38 @@ namespace UnitTestCases
         }
 
         [TestMethod]
-        public void plateShowIEmpty()
+        public void twoPlateShow()
         {
-            Assert.AreEqual(plateController.ShowPlates(), "No plates found in database.");
+            string response = plateController.AddPlate("jamon");
+            response = plateController.AddPlate("pollo");
+            string testString = "==============================\r\n" +
+                              "Plate id: " + 1 + "\r\n" +
+                              "Plate name: " + "jamon" + "\r\n";
+            testString += "==============================\r\n" +
+                  "Plate id: " + 2 + "\r\n" +
+                  "Plate name: " + "pollo" + "\r\n";
+            Assert.AreEqual(plateController.ShowPlates(), testString);
 
+        }
+
+        [TestMethod]
+        public void plateShowIsEmpty()
+        {
+            Assert.AreEqual(plateController.ShowPlates(), ApplicationMessages.noPlatesInDataBase);
+
+        }
+
+        [TestMethod]
+        public void plateRemoveSuccesful()
+        {
+            string response = plateController.AddPlate("jamon");
+            Assert.AreEqual(plateController.RemovePlate(1), ApplicationMessages.deletedPlate);
+        }
+
+        [TestMethod]
+        public void plateRemoveWrongId()
+        {
+            Assert.AreEqual(plateController.RemovePlate(1), ApplicationMessages.errorDeletingIdNotFound);
         }
     }
 

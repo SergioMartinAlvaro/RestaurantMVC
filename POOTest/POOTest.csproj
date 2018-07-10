@@ -43,20 +43,19 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="Controllers\main.controller.cs" />
-    <Compile Include="Controllers\plate.controller.cs" />
+    <Compile Include="Controllers\MainController.controller.cs" />
+    <Compile Include="Controllers\PlateController.controller.cs" />
     <Compile Include="Interfaces\IPlate.cs" />
     <Compile Include="Models\Plate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <Compile Include="Services\plate.service.cs" />
+    <Compile Include="Utilities\ApplicationMessages.cs" />
     <Compile Include="Views\VisualInterface.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
   </ItemGroup>
-  <ItemGroup>
-    <Folder Include="Utilities\" />
-  </ItemGroup>
+  <ItemGroup />
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
