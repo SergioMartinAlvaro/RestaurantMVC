@@ -15,7 +15,8 @@ namespace POOTest.Views
                                "  2. Show plates\r\n" +
                                "  3. Find a plate\r\n" +
                                "  4. Remove a plate\r\n" +
-                               "  5. Exit\r\n");
+                               "  5. Generate excel with plates\r\n" +
+                               "  6. Exit\r\n");
         }
 
         public static string AskForString(string answer)

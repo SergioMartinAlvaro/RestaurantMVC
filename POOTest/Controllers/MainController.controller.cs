@@ -50,8 +50,11 @@ namespace POOTest.Controllers
                         Console.WriteLine(ApplicationMessages.badIdIntroduced);
                     }
                     break;
-
                 case "5":
+                    plateController.generateExcel();
+                    Console.WriteLine(ApplicationMessages.downloadingExcel);
+                    break;
+                case "6":
                     Console.WriteLine("Bye! Have a nice day!");
                     break;
                 default:
@@ -65,7 +68,7 @@ namespace POOTest.Controllers
         public void StartApplication()
         {
             string response = "";
-            while(response != "5")
+            while(response != "6")
             { 
                 VisualInterface.WriteMenu();
                 response = VisualInterface.AskForString("Introduce a number to choose an option");

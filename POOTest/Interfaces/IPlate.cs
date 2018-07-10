@@ -12,5 +12,8 @@ namespace POOTest.Interfaces
         string RemovePlate(int id);
         string FindPlate(int id);
         string ShowPlates();
+        int CountIngredients();
+        void generateExcel();
+
     }
 }

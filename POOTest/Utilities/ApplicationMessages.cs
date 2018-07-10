@@ -14,6 +14,7 @@ namespace POOTest.Utilities
         public const string errorDeletingIdNotFound = "Error deleting plate, id not found.";
         public const string plateNotFound = "Plate not found in database, this Id isnt available.";
         public const string noPlatesInDataBase = "No plates found in database.";
+        public const string downloadingExcel = "Downloaded Excel from the database!";
 
         public const string askForNewPlate = "Introduce the name of the new plate: ";
         public const string askForId = "Introduce the id value: ";

@@ -68,6 +68,33 @@ namespace POOTest.Services
 
         }
 
+        public int CountIngredients()
+        {
+            throw new NotImplementedException();
+        }
+        
+        public void generateExcel()
+        {
+            Type excelType = Type.GetTypeFromProgID("Excel.Application");
+            dynamic excel = Activator.CreateInstance(excelType);
+            excel.Visible = true;
+
+            excel.Workbooks.Add();
+
+            dynamic sheet = excel.ActiveSheet;
+
+            sheet.Cells[1, "A"] = "ID DEL PLATO";
+            sheet.Cells[1, "B"] = "NOMBRE DEL PLATO";
+
+            int index = 2;
+            foreach(Plate plato in availablePlates)
+            {
+                sheet.Cells[index, "A"] = plato.id;
+                sheet.Cells[index, "B"] = plato.name;
+                index++;
+            }
+        }
+
         private bool IsUniquePlateName(string name)
         {
             return (availablePlates.ToArray().Where((x) => x.name.ToLower() == name.ToLower())).Count() > 0;
@@ -84,5 +111,6 @@ namespace POOTest.Services
                 return listOfPlates.ToArray()[listOfPlates.ToArray().Length - 1].id + 1;
             }
         }
+
     }
 }

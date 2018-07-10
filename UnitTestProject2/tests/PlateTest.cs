@@ -92,11 +92,16 @@ namespace UnitTestCases
             Assert.AreEqual(plateController.FindPlate(2), ApplicationMessages.plateNotFound);
         }
 
+        /*
         [TestMethod]
-        public void MyTestMethod()
+        public void countIngredients()
         {
-
+            Plate newPlate = new Plate(1, "cocido");
+            Ingredient newIngredient = new Ingredient(1, "garbanzos", newPlate.id);
+            newPlate.addIngredient(newIngredient);
+            Assert.AreEqual(plateController.countIngredients(), 1);
         }
+        */
     }
 
 

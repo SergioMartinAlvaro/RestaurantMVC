@@ -23,9 +23,19 @@ namespace POOTest.Controllers
             return plateService.AddPlate(name);
         }
 
+        public int CountIngredients()
+        {
+            throw new NotImplementedException();
+        }
+
         public string FindPlate(int id)
         {
             return plateService.FindPlate(id);
+        }
+
+        public void generateExcel()
+        {
+            plateService.generateExcel();
         }
 
         public string RemovePlate(int id)

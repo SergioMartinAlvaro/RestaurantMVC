@@ -45,7 +45,9 @@
   <ItemGroup>
     <Compile Include="Controllers\MainController.controller.cs" />
     <Compile Include="Controllers\PlateController.controller.cs" />
+    <Compile Include="Interfaces\IIngredient.cs" />
     <Compile Include="Interfaces\IPlate.cs" />
+    <Compile Include="Models\Ingredient.cs" />
     <Compile Include="Models\Plate.cs" />
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />

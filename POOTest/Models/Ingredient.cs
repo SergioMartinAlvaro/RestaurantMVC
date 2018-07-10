@@ -6,25 +6,17 @@ using System.Threading.Tasks;
 
 namespace POOTest.Models
 {
-    public class Plate
+    public class Ingredient
     {
         private int _id;
         private string _name;
-        private List<Ingredient> _ingredients;
+        private int _plateId;
 
-        public Plate(int id, string name)
+        public Ingredient(int id, string name, int plateId)
         {
             _id = id;
             _name = name;
-            _ingredients = new List<Ingredient>();
-
-        }
-
-        public List<Ingredient> ingredients{
-            get
-            {
-                return _ingredients;
-            }
+            _plateId = plateId;
         }
 
         public int id
@@ -35,10 +27,18 @@ namespace POOTest.Models
             }
             set
             {
-                if(value != null)
+                if (value != null)
                 {
                     _id = value;
                 }
+            }
+        }
+
+        public int plateId
+        {
+            get
+            {
+                return _plateId;
             }
         }
 
