@@ -89,7 +89,13 @@ namespace UnitTestCases
             string testString = "==============================\r\n" +
                               "Plate id: " + 1 + "\r\n" +
                               "Plate name: " + "jamon" + "\r\n";
-            Assert.AreEqual(plateController.FindPlate(1), testString);
+            Assert.AreEqual(plateController.FindPlate(2), ApplicationMessages.plateNotFound);
+        }
+
+        [TestMethod]
+        public void MyTestMethod()
+        {
+
         }
     }
 

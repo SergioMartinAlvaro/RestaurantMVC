@@ -13,7 +13,7 @@ namespace POOTest
         static void Main(string[] args)
         {
             MainController menu = new MainController();
-            menu.startApplication();
+            menu.StartApplication();
 
         }
     }

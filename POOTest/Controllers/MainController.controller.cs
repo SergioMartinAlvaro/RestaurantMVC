@@ -16,17 +16,32 @@ namespace POOTest.Controllers
         public PlateController plateController = new PlateController();
         public string MenuController(string number)
         {
+
+            string id;
+            string name;
+
             switch(number)
             {
                 case "1":
-                    string name = VisualInterface.AskForString(ApplicationMessages.askForNewPlate);
+                    name = VisualInterface.AskForString(ApplicationMessages.askForNewPlate);
                     Console.WriteLine(plateController.AddPlate(name)); 
                     break;
                 case "2":
                     Console.WriteLine(plateController.ShowPlates());
                     break;
+                case "3":
+                    id = VisualInterface.AskForString(ApplicationMessages.askForId);
+                    try
+                    {
+                        Console.WriteLine(plateController.FindPlate(int.Parse(id)));
+                    }
+                    catch (Exception e)
+                    {
+                        Console.WriteLine(ApplicationMessages.badIdIntroduced);
+                    }
+                    break;
                 case "4":
-                    string id = VisualInterface.AskForString(ApplicationMessages.askForId);
+                    id = VisualInterface.AskForString(ApplicationMessages.askForId);
                     try
                     {
                         Console.WriteLine(plateController.RemovePlate(int.Parse(id)));
@@ -47,7 +62,7 @@ namespace POOTest.Controllers
             return number;
         }
 
-        public void startApplication()
+        public void StartApplication()
         {
             string response = "";
             while(response != "5")
